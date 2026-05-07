@@ -1,0 +1,9 @@
+[project]
+name = "powerlink control"
+version = "0.1.0"
+description = "Direct control of powerlink breakers at MSI"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "pymodbustcp>=0.3.0",
+]
