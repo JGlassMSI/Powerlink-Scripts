@@ -6,7 +6,7 @@ from ipaddress import ip_address
 from pyModbusTCP.client import ModbusClient
 
 parser = argparse.ArgumentParser(
-    description="Simple command line interface to turn on/off the Anne Frank installation"
+    description="Simple command line interface to turn on/off powerlink panels"
 )
 
 parser.add_argument("ip", type=ip_address, help="The IP address to send the message to")
