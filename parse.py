@@ -20,7 +20,14 @@ if __name__ == "__main__":
     for i, packet in enumerate(capture):
         if hasattr(packet, 'tcp') and 'MODBUS' in str(packet.layers):
             mod = packet['MODBUS']
-            if mod.func_code == "1":
-                pass
+            if mod.func_code == "1": #read coils
+                if hasattr(mod, "bitnum"): #response packet
+                    breakpoint()
+                    print("__________")
+                    data: list = mod.bitval.all_fields
+                    for num, val in zip(mod.bitnum.all_fields, mod.bitval.all_fields):
+                        coil_number = num.showname_value
+                        value = 1 if val.showname_value == 'True' else 0
+                        print(f"{coil_number=} {value=}")
 
             
