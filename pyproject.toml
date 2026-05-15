@@ -8,3 +8,6 @@ dependencies = [
     "pymodbustcp>=0.3.0",
     "pyshark>=0.6",
 ]
+
+[tool.pyright]
+typeCheckingMode = "standard"
